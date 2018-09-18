@@ -10,3 +10,14 @@ describe('Chunk takes an array and splits it into an array of smaller arrays', (
     expect(helper.chunk()).toEqual([])
   })
 })
+
+describe('Compact takes an array and returns a new array with all falsey values removed.', () => {
+  it('Returns an array with all falsey values removed.', () => {
+    const array = [1, 2, '', null, 0]
+
+    expect(helper.compact(array)).toEqual([1, 2])
+  }),
+  it('Returns an empty array if no argument is given.', () => {
+    expect(helper.compact()).toEqual([])
+  })
+})
