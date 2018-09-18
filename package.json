@@ -1,0 +1,15 @@
+{
+  "name": "helpr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "helpr.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^23.6.0"
+  }
+}
