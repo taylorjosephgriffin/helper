@@ -21,3 +21,9 @@ describe('Compact takes an array and returns a new array with all falsey values 
     expect(helper.compact()).toEqual([])
   })
 })
+
+describe('Concat takes multiple arrays/values and concatenates them into one array.', () => {
+  it('Concatenates all provided arguments into one array.', () => {
+    expect(helper.concat([1], 2, [3], [[4]])).toEqual([1, 2, 3, [4]])
+  })
+})
