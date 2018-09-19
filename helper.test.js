@@ -27,3 +27,17 @@ describe('Concat takes multiple arrays/values and concatenates them into one arr
     expect(helper.concat([1], 2, [3], [[4]])).toEqual([1, 2, 3, [4]])
   })
 })
+
+describe('Difference returns given array values not present in original array.', () => {
+  it('Returns values not included in original array.', () => {
+    const array1 = [1, 2, 3]
+    const array2 = [2, 4, 5]
+
+    expect(helper.difference(array1, array2)).toEqual([4, 5])
+  }),
+  it('Returns the original array if no values are given.', () => {
+    const array1 = [1, 2, 3]
+
+    expect(helper.difference(array1)).toEqual([1, 2, 3])
+  })
+})
