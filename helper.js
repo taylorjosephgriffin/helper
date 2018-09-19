@@ -28,6 +28,18 @@ const helper = {
       } else concatenated.push(values[i])
     }
     return concatenated
+  },
+
+  difference: function(array, ...values) {
+    if (values.length < 1) return array
+    const compare = array.slice(0)
+    const difference = []
+    values.forEach(array => {
+      array.forEach(item => {
+        if (!compare.includes(item)) difference.push(item)
+      })
+    })
+    return difference
   }
 
 }
