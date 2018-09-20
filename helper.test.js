@@ -41,3 +41,21 @@ describe('Difference returns given array values not present in original array.',
     expect(helper.difference(array1)).toEqual([1, 2, 3])
   })
 })
+
+describe('Take returns a slice of the given array with n elements taken from the beginning.', () => {
+  it('Returns a slice of the given array.', () => {
+    const array = [1, 2, 3, 4, 5]
+
+    expect(helper.take(array, 2)).toEqual([1, 2])
+  })
+  it('Returns the first element if n is not provided.', () => {
+    const array = [1, 2, 3, 4, 5]
+
+    expect(helper.take(array)).toEqual([1])
+  }),
+  it('Returns an empty array if n is 0.', () => {
+    const array = [1, 2, 3, 4, 5]
+
+    expect(helper.take(array, 0)).toEqual([])
+  })
+})

@@ -40,6 +40,12 @@ const helper = {
       })
     })
     return difference
+  },
+
+  take: function(array, n) {
+    if (n === 0) return []
+    if (!n) n = 1
+    return array.slice(0, n)
   }
 
 }
