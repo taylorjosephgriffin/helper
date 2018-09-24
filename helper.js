@@ -56,6 +56,11 @@ const helper = {
   		else result += array[i].toString() + separator
   	}
   	return result
+  },
+
+  drop: function(array, number) {
+    if (typeof drop === 'undefined') drop = 1
+    return array.slice(drop, array.length)
   }
 
 }
