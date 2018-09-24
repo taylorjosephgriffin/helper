@@ -46,6 +46,16 @@ const helper = {
     if (n === 0) return []
     if (!n) n = 1
     return array.slice(0, n)
+  },
+
+  join: function(array, separator) {
+    if (!separator) separator = ''
+    let result = ''
+  	for (let i = 0; i < array.length; i++) {
+  		if (i === array.length - 1) result += array[i].toString()
+  		else result += array[i].toString() + separator
+  	}
+  	return result
   }
 
 }
