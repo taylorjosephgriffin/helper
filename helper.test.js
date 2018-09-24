@@ -73,3 +73,16 @@ describe('Join takes an array and a separator and returns a string of each eleme
     expect(helper.join(array)).toBe('abc')
   })
 })
+
+describe('Drop takes an array and a number and returns a new array with n elements removed.', () => {
+  it('Returns a new array with n elements removed.', () => {
+    const array = [1, 2, 3]
+
+    expect(helper.drop(array, 1)).toEqual([2, 3])
+  }),
+  it('Returns a new array with 1 element removed if n has not been provided.', () => {
+    const array = [1, 2, 3]
+
+    expect(helper.drop(array)).toEqual([2, 3])
+  })
+})
