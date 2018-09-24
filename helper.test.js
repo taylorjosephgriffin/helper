@@ -59,3 +59,17 @@ describe('Take returns a slice of the given array with n elements taken from the
     expect(helper.take(array, 0)).toEqual([])
   })
 })
+
+describe('Join takes an array and a separator and returns a string of each element separated by separator.', () => {
+  it('Returns a string of each element separated by separator.', () => {
+    const array = ['a', 'b', 'c']
+    const separator = '~'
+
+    expect(helper.join(array, separator)).toBe('a~b~c')
+  }),
+  it('Returns a string of each element without a separator if no separator has been given.', () => {
+    const array = ['a', 'b', 'c']
+
+    expect(helper.join(array)).toBe('abc')
+  })
+})
