@@ -61,6 +61,16 @@ const helper = {
   drop: function(array, number) {
     if (typeof drop === 'undefined') drop = 1
     return array.slice(drop, array.length)
+  },
+
+  fill: function(array, char, start, end) {
+    let i
+  	typeof start !== 'undefined' ? i = start : i = 0
+  	typeof end === 'undefined' ? end = array.length : end = end
+  	for(i; i < end; i++) {
+  		array[i] = char
+  	}
+    return array
   }
 
 }
