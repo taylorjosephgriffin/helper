@@ -86,3 +86,18 @@ describe('Drop takes an array and a number and returns a new array with n elemen
     expect(helper.drop(array)).toEqual([2, 3])
   })
 })
+
+describe('Fill method.', () => {
+  it('Fills all elements of array when start and end are not provided.', () => {
+    const array = [1, 2, 3]
+    const char = 'a'
+
+    expect(helper.fill(array, char)).toEqual(['a', 'a', 'a'])
+  })
+  it('Fills elements of array with value from start up to, but not including, end when provided.', () => {
+    const array = [1, 2, 3]
+    const char = 'a'
+
+    expect(helper.fill(array, char, 0, 1)).toEqual(['a', 2, 3])    
+  })
+})
