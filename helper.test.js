@@ -112,3 +112,9 @@ describe('Flatten flattens an array a single level deep.', () => {
     expect(helper.flatten()).toBe(null)
   })
 })
+
+describe('Intersection returns the common element in 2 or more arrays.', () => {
+  it('Returns the common elements found within 2 or more arrays.', () => {
+    expect(helper.intersection([1, 2], [2, 3])).toEqual([2])
+  })
+})

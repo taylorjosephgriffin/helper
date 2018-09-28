@@ -83,6 +83,19 @@ const helper = {
   	})
 
   	return flattened
+  },
+
+  intersection: function(first, ...values) {
+    const arrayGroup = []
+    arrayGroup.push(first)
+    values.forEach(array => arrayGroup.push(array))
+
+    const intersection =
+      arrayGroup.reduce((accumulator, current) =>
+      accumulator.filter(val =>
+      current.includes(val)))
+
+    return intersection
   }
 
 }
