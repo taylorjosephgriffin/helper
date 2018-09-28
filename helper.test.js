@@ -98,6 +98,17 @@ describe('Fill method.', () => {
     const array = [1, 2, 3]
     const char = 'a'
 
-    expect(helper.fill(array, char, 0, 1)).toEqual(['a', 2, 3])    
+    expect(helper.fill(array, char, 0, 1)).toEqual(['a', 2, 3])
+  })
+})
+
+describe('Flatten flattens an array a single level deep.', () => {
+  it('Flattens an array a single level deep.', () => {
+    const array = [1, [2, [3, [4]], 5]]
+
+    expect(helper.flatten(array)).toEqual([1, 2, [3, [4]], 5])
+  }),
+  it('Returns null if no array is provided.', () => {
+    expect(helper.flatten()).toBe(null)
   })
 })
