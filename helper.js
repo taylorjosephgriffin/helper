@@ -71,6 +71,18 @@ const helper = {
   		array[i] = char
   	}
     return array
+  },
+
+  flatten: function(array) {
+    if (!array) return null
+    const flattened = []
+  	array.forEach(element => {
+  		element.length > 1
+  			? element.forEach(element => flattened.push(element))
+  			: flattened.push(element)
+  	})
+
+  	return flattened
   }
 
 }
