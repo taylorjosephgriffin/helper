@@ -96,6 +96,12 @@ const helper = {
       current.includes(val)))
 
     return intersection
+  },
+  
+  fromPairs: function(arrays) {
+    let object = {}
+    arrays.forEach(array => object[array[0]] = array[1])
+    return object
   }
 
 }
