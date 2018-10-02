@@ -118,3 +118,11 @@ describe('Intersection returns the common element in 2 or more arrays.', () => {
     expect(helper.intersection([1, 2], [2, 3])).toEqual([2])
   })
 })
+
+describe('fromPairs takes an array of arrays and returns a new object with those key value pairs.', () => {
+  it('Returns a new object of key value pairs.', () => {
+    const array = [['a', 1], ['b', 2]]
+
+    expect(helper.fromPairs(array)).toEqual({a: 1, b:2})
+  })
+})
